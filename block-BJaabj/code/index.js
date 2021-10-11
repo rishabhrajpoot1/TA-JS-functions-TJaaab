@@ -52,11 +52,11 @@ function sayHello(){
   9 * 9 = 81
   9 * 10 = 90
 */
- function getTable(){
+ function getTable() {
    let num = (+prompt("Enter a number"));
-   for (let i=1; i<=10;i++);
+   for (let i = 1; i <= 10; i++)
    {
-     console.log(num * i);
+     console.log(`${num} * ${i} = ${num * i}`);
    }
  }
 /*
@@ -69,8 +69,11 @@ function sayHello(){
    let year = (+prompt("Enter a year"));
    if (year%4 == 0){
      alert(`${year} is a leap year`);
-   }
-   else{
+   } else if (year%100 == 0){
+     alert(`${year} is not a leap year`);
+   } else if (year%400 == 0){
+     alert(`${year} is a leap year`);
+   } else {
      alert(`${year} is not a leap year`);
    }
  }
@@ -83,8 +86,9 @@ function sayHello(){
 */
  function getFactorial(){
   let number = (+prompt("Enter a number"));
-   for (let i=number-1;i>=1;i--){
+  let final = 1;
+   for (let i=number;i>=1;i--){
      number = i*number
    }
-   alert(number);
+   alert(`The factorial of ${number} is ${final}`);
  }
