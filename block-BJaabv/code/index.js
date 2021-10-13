@@ -34,7 +34,7 @@ function calculateMoviesToWatch(age = 0, numbeOfMovies = 0) {
 
 function celsiusToFahrenheit(tempC) {
   // Your code goes here
-  let fahrenheitTemp = 5 * tempC + 32;
+  let fahrenheitTemp =  (tempC *9)/5 + 32 ;
   return fahrenheitTemp;
 }
 
@@ -46,7 +46,7 @@ function celsiusToFahrenheit(tempC) {
 
 function celsiusToFahrenheit(tempF) {
   // Your code goes here
-  let celsiusTemp = 5 * tempF + 32;
+  let celsiusTemp = ((temF -32) *5)/9;
   return celsiusTemp;
 }
 
@@ -84,11 +84,22 @@ pow(-31, 2); // "The number below 1 is not allowed"
 and return sum or product of 1,…,n. If user enters any other value than `sum` or `product` alert `Not a valid Input`.
 */
 
-function sumOrProductOfN(n=0,string=" "){
+function sumOrProductOfN(num , operation){
   // Your code goes here
-  let result=0
-  if(string==="sum" || string==="product"){
-    
+  if (operation === "sum"){
+    let sum = 0
+  for (let i = 1; i<=num; i++){
+    sum+= i;
+  }
+  return sum;
+  }else if (operatio === "product"){
+  let product = 1;
+  for (let i = 1; i<=num; i++){
+    product*= i;
+  }
+  return product;
+  } else{
+    alert("Not a valid Input")
   }
 }
 
@@ -100,20 +111,25 @@ sumOrProductOfN(4, "hello"); // alert "Not a valid Input"
 6. 🎖Write a program that accepts a number n using argument and return the sum of the numbers 1 to n
 */
 
-function sumOfN() {
+function sumOfN(n) {
   // Your code goes here
+  let sum = 0
+  for (let i = 1; i<=n; i++){
+    sum+= i;
+  }
+  return sum;
 }
 
 /*
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
 */
 
-function sumOfN(n=0) {
+function sumOfN(n) {
   // Your code goes here
-  let res=0;
+  let sum=0;
   for(let i=1;i<=n;i++){
     if(i%5===0 || i%7===0){
-      res=res+i;
+      sum+=i;
     }
    
   }
