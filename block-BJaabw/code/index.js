@@ -16,7 +16,7 @@ function minToSec(min=0) {
   return min*60
 }
 // - Execute the function with required parameter
-
+minToSec(60);
 /* 2. 
 Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
 Return true and false based on that.
@@ -36,7 +36,7 @@ function isInRange(lower = 0 , upper = 0 , number = 0) {
   }
 }
 // - Execute the function with required parameter
-
+isInRange(1, 10, 19)
 /* 2. calculateBMI
 
 
@@ -55,24 +55,27 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI(weight=0 , height=0) {
+function calculateBMI(weight , height) {
   // Your code
  let BMI = weight / (height * height);
  if(BMI<18.5)
  {
    return `Underweight`;
 
- } else if(18.5<=BMI<=24.9)
+ } else if(18.5<BMI<24.9)
  {
    return `Normal weight`;
 
- } else if(25<=BMI<=29.9)
+ } else if(25<BMI<29.9)
  {
    return `Overweight`;
-   
+
  } else if(BMI>30)
  {
    return `Obese`;
+ } else 
+ {
+   return `Enter Valid Input`
  }
 }
 
